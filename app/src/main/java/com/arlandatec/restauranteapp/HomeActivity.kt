@@ -1,17 +1,16 @@
 package com.arlandatec.restauranteapp
 
 import android.os.Bundle
-import android.view.Gravity
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.arlandatec.restauranteapp.adapter.PlatoAdaptador
+import com.arlandatec.restauranteapp.databinding.ActivityHomeBinding
+import com.arlandatec.restauranteapp.databinding.FragmentHomeBinding
+import com.arlandatec.restauranteapp.model.Plato
 import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -55,6 +54,11 @@ class HomeActivity : AppCompatActivity() {
                 .replace(R.id.fragment_container, HomeFragment()).commit()
             navView.setCheckedItem(R.id.nav_home)
         }
+
+//ingresndo data fake en el listado
+
+
+
     }
     /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -80,6 +84,9 @@ class HomeActivity : AppCompatActivity() {
 //            onBackPressedDispatcher.onBackPressed()
 //        }
 //    }
+
+
+
 }
 
 

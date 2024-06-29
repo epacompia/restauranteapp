@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -42,10 +45,10 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth)
+    //mplementation(libs.firebase.auth)
 
-    implementation ("com.google.firebase:firebase-bom:31.5.0")
-    implementation ("com.google.android.gms:play-services-auth:20.5.0")
+    //implementation ("com.google.firebase:firebase-bom:31.5.0")
+    //implementation ("com.google.android.gms:play-services-auth:20.5.0")
 
 
     testImplementation(libs.junit)

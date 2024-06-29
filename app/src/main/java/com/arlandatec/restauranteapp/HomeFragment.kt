@@ -5,11 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.arlandatec.restauranteapp.adapter.PlatoAdaptador
+import com.arlandatec.restauranteapp.databinding.FragmentHomeBinding
+import com.arlandatec.restauranteapp.model.Plato
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+private lateinit var binding: FragmentHomeBinding
+
 
 /**
  * A simple [Fragment] subclass.
@@ -20,6 +27,8 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +43,26 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+
+
+
         return inflater.inflate(R.layout.fragment_home, container, false)
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+//        binding = FragmentHomeBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
+//        binding.rvMenues.adapter = PlatoAdaptador(getMenues())
+
+        val recyclerView: RecyclerView =view.findViewById(R.id.rvMenues)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+
+        recyclerView.adapter = PlatoAdaptador(getMenues())
+
     }
 
     companion object {
@@ -55,5 +83,14 @@ class HomeFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun getMenues() : List<Plato>{
+        return listOf(
+            Plato(1,"Huancaina","papa + huancaida", 15.00, 1),
+            Plato(2,"Huancaina","papa + huancaida", 15.00, 1),
+            Plato(3,"Huancaina","papa + huancaida", 15.00, 1),
+            Plato(4,"Huancaina","papa + huancaida", 15.00, 1),
+        )
     }
 }
