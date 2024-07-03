@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277324609625",
+    "project_id": "restauranteapp-23327",
+    "storage_bucket": "restauranteapp-23327.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277324609625:android:5db63b8ecfb63cb0ebd948",
+        "android_client_info": {
+          "package_name": "com.arlandatec.restauranteapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwgN4aL2VeGz71UNBLKwF-1cWx2TaZClc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
