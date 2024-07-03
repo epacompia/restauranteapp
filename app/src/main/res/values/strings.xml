@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">restauranteapp</string>
+<<<<<<< HEAD
     <string name="usuario">Miusuario</string>
     <string name="default_web_client_id">277324609625-5b7ip8138f71ca4pnm40cs7cirvu5mml.apps.googleusercontent.com</string>
     <!-- Strings used for fragments for navigation -->
@@ -44,4 +45,11 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+=======
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+>>>>>>> 3e15e383b83dd1ca81871faf8bc608bb153a2d4f
 </resources>

@@ -16,8 +16,11 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3e15e383b83dd1ca81871faf8bc608bb153a2d4f
     private lateinit var mGoogleSignInClient: GoogleSignInClient
     private lateinit var mAuth: FirebaseAuth
 
@@ -67,6 +70,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
          */
+<<<<<<< HEAD
     }
 
 
@@ -81,10 +85,25 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+=======
+>>>>>>> 3e15e383b83dd1ca81871faf8bc608bb153a2d4f
     }
 
 
 
 
+<<<<<<< HEAD
+=======
+    private fun signOutAndStartSignInActivity() {
+        mAuth.signOut()
+
+        mGoogleSignInClient.signOut().addOnCompleteListener(this) {
+            // Optional: Update UI or show a message to the user
+            val intent = Intent(this@MainActivity, SignInActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+>>>>>>> 3e15e383b83dd1ca81871faf8bc608bb153a2d4f
 
 }

@@ -15,7 +15,14 @@
         android:networkSecurityConfig="@xml/network_security_config">
 
         <activity
+<<<<<<< HEAD
             android:name=".CategoriaActivity"
+=======
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+>>>>>>> 3e15e383b83dd1ca81871faf8bc608bb153a2d4f
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
