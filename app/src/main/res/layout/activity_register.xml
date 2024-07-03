@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="16dp"
+    tools:context=".RegisterActivity">
+
+    <!-- CardView for central container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHeight_percent="0.8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Registro de Usuario"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text_color"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/etNombre"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <!-- Input fields -->
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Apellidos"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/etNombre"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Correo Electrónico"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/etApellidos"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <EditText
+                android:id="@+id/etCelular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Celular"
+                android:inputType="phone"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/etEmail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <EditText
+                android:id="@+id/etDni"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="DNI"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/etCelular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <EditText
+                android:id="@+id/etFecNac"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de Nacimiento"
+                android:inputType="date"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/etDni"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <EditText
+                android:id="@+id/etDireccion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Dirección"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/etFecNac"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <!-- Register button -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Registrar"
+                android:backgroundTint="@color/primary_color"
+                android:textColor="@android:color/white"
+                app:cornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@id/etDireccion"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <!-- Link to login -->
+            <TextView
+                android:id="@+id/tvLoginLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Ya tienes una cuenta? Inicia sesión"
+                android:textColor="@color/primary_color"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/btnRegister"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
